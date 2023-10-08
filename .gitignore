@@ -12,3 +12,6 @@ _deps
 
 # ignore cmake build for now
 build/*
+
+# vscode 
+.vscode/*
