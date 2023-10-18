@@ -36,8 +36,8 @@ void Engine::processInput(GLFWwindow* window) const {
 void Engine::run() {
     Shader shader("../shader.vert",  "../shader.frag");
     Buffer buffer(vertices);
-    Attribute position(3, sizeof(float), GL_FLOAT, false);
-    buffer.addAttribute(position);
+    buffer.addAttribute(Attribute(3, sizeof(float), GL_FLOAT, false));
+    buffer.addAttribute(Attribute(3, sizeof(float), GL_FLOAT, false));
     buffer.create();
     // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 

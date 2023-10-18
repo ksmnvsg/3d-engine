@@ -67,6 +67,16 @@ void Shader::setVec4(const std::string name, const float v1, const float v2, con
     glUniform4f(vertexColorLocation, v1, v2, v3, v4);
 }
 
+void Shader::setInt(const std::string name, const int value) const {
+    int vertexColorLocation = glGetUniformLocation(programID, name.c_str());
+    glUniform1f(vertexColorLocation, value);
+}
+
+void Shader::setFloat(const std::string name, const float value) const {
+    int vertexColorLocation = glGetUniformLocation(programID, name.c_str());
+    glUniform1f(vertexColorLocation, value);
+}
+
 void Shader::checkShader(const unsigned int shader) const {
     // check compilation
     int success;
