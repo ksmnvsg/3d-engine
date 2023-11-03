@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(3d_engine)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wall -Wextra -Wdeprecated-declarations")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wall -Wextra -Wdeprecated-declarations -g")
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(/opt/homebrew/include)
@@ -13,6 +13,8 @@ add_executable(3d_engine
         Engine.cpp
         Shader.hpp
         Shader.cpp
+        Texture.hpp
+        Texture.hpp
         main.cpp)
 
 find_package(GLM REQUIRED)
